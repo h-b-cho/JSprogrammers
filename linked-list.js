@@ -68,6 +68,16 @@ class SinglyLinkedList {
       this.tail = theNode; // 이떄, 만약 재설정한 연결 논리상의 theNode.next가 null이었다면, 즉 우리가 삭제하려던 노드가 tail이었었다면 연결리스트의 tail에 대한 정보를 현재 상황에 맞게 수정한다.
     }
   }
+
+  size() {
+    let count = 0;
+    let currNode = this.head;
+    while (currNode) {
+      count++;
+      currNode = currNode.next;
+    }
+    return count;
+  }
 }
 
 /* 
